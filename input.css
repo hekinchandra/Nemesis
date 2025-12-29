@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Animasi Pulse yang lebih halus */
+@keyframes ping-slow {
+  75%,
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Tulis efek hover custom kamu di sini */
+.btn-nemesis {
+  @apply transition-all duration-500; /* Menggunakan fitur tailwind di dalam CSS */
+}
+
+.btn-nemesis:hover {
+  box-shadow: 0 0 25px var(--color-gold);
+  transform: translateY(-5px);
+}
+/* Import Font Keren dari Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap");
+
+/* --- EFEK BUTTON PREMIUM --- */
+
+/* Animation Utilities */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Text Selection Color */
+::selection {
+  background: #d4af37;
+  color: #000;
+}
+
+@layer base {
+  html {
+    font-family: "Space Grotesk", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom CSS untuk Animasi Scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek Glassmorphism untuk kartu */
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+/* 1. Tiga baris utama ini WAJIB ada di paling atas */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* 2. Tempat menulis CSS kustom (opsional) */
+/* Contoh: Jika kamu ingin membuat efek animasi sendiri */
+/* .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+/* 3. Tempat merapikan class yang terlalu panjang (opsional) */
+/* @layer components {
+    .btn-neon { */
+/* Kamu bisa menggabungkan banyak class Tailwind menjadi satu */
+/* @apply px-6 py-2 bg-transparent border border-cyan-400 text-cyan-400 font-bold uppercase tracking-widest hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.5)];
+    }
+}  */
